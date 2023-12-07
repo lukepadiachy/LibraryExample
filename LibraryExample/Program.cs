@@ -6,14 +6,12 @@
         {
 
             Book MyBook = new Book ("Colors",200,true);
+            Book MyBook2 = new Book("People", 150, false);
 
-            MyBook.Title = "Colors";
-            MyBook.Pages = 200;
-            MyBook.InGoodCOndition = true;
 
-            Console.WriteLine("Book Title: " + MyBook.Title);
-            Console.WriteLine("Book Pages: " + MyBook.Pages);
-            if (MyBook.InGoodCOndition)
+            Console.WriteLine("Book Title: " + MyBook2.Title);
+            Console.WriteLine("Book Pages: " + MyBook2.Pages);
+            if (MyBook2.InGoodCOndition)
             {
 
                 Console.WriteLine("Book Condition: Good ");
