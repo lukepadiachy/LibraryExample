@@ -8,19 +8,32 @@ namespace LibraryExample
 {
     internal class Author
     {
-        public string Name;
-        public int Age;
-        public bool LocalOrInternational;
+        private string Name;
+        private int Age;
+        private bool LocalOrInternational;
 
         public Author(string name, int age, bool localOrInternational) 
         { 
             Name = name;
             Age = age;
             LocalOrInternational = localOrInternational;
-        
-        
         }
 
+        public string GetName()
+        {
+            return Name;
+
+        }
+        public int GetAge()
+        {
+            return Age;
+
+        }
+        public bool GetLocalOrInternational()
+        {
+            return LocalOrInternational;
+
+        }
 
     }
 }

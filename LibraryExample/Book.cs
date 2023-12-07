@@ -8,9 +8,9 @@ namespace LibraryExample
 {
     internal class Book
     {
-         public string Title;
-         public int Pages;
-         public  bool InGoodCOndition;
+         private string Title;
+         private int Pages;
+         private  bool InGoodCOndition;
 
         public Book(string title, int pages, bool inGoodcondition) 
         
@@ -18,9 +18,22 @@ namespace LibraryExample
             Title = title;
             Pages = pages;
             InGoodCOndition = inGoodcondition;
-        
-        
         }
 
+         public string GetTitle ()
+        { 
+            return Title; 
+        
+        }
+        public int GetPages()
+        {
+            return Pages;
+
+        }
+        public bool GetCondition()
+        {
+            return InGoodCOndition;
+
+        }
     }
 }

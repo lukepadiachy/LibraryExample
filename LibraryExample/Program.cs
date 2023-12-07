@@ -1,17 +1,21 @@
-﻿namespace LibraryExample
-{
+﻿using System.Runtime.InteropServices;
+
+namespace LibraryExample
+{ 
     internal class Program
+        
     {
         static void Main(string[] args)
         {
-
+            
             Book MyBook = new Book ("Colors",200,true);
             Book MyBook2 = new Book("People", 150, false);
 
 
-            Console.WriteLine("Book Title: " + MyBook2.Title);
-            Console.WriteLine("Book Pages: " + MyBook2.Pages);
-            if (MyBook2.InGoodCOndition)
+            Console.WriteLine("Book Title: " + MyBook2.GetTitle());
+            Console.WriteLine("Book Pages: " + MyBook2.GetPages());
+
+            if (MyBook2.GetCondition())
             {
 
                 Console.WriteLine("Book Condition: Good ");
@@ -25,23 +29,19 @@
 
             Author BookAuthor = new Author("Danny", 31, true);
 
-            BookAuthor.Name = "Danny";
-            BookAuthor.Age = 31;
-            BookAuthor.LocalOrInternational = true;
+            Console.WriteLine("Author Age: " + BookAuthor.GetName() );
+            Console.WriteLine("Author Age: " + BookAuthor.GetAge());
 
-            Console.WriteLine("Author Age: " + BookAuthor.Name );
-            Console.WriteLine("Author Age: " + BookAuthor.Age);
-
-            if (BookAuthor.LocalOrInternational)
+            if (BookAuthor.GetLocalOrInternational())
             {
 
-                Console.WriteLine("Local: Local Author");
+                 Console.WriteLine("Local: Local Author");
 
             }
             else
             {
 
-                Console.WriteLine("Local: Not Local Author");
+                 Console.WriteLine("Local: Not Local Author");
 
             }
 
