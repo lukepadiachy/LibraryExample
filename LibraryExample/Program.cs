@@ -29,7 +29,7 @@ namespace LibraryExample
 
             Author BookAuthor = new Author("Danny", 31, true);
 
-            Console.WriteLine("Author Age: " + BookAuthor.GetName() );
+            Console.WriteLine("Author Name: " + BookAuthor.GetName() );
             Console.WriteLine("Author Age: " + BookAuthor.GetAge());
 
             if (BookAuthor.GetLocalOrInternational())
